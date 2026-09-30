@@ -1,3 +1,1 @@
-print("Hello World")
-print("Hello World")
-print("Hello World")
+print("YES") if 5>2 else print("NO") # знач_если_истина if условие else: знач_если_ложь
