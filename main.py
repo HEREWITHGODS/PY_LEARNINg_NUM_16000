@@ -1,1 +1,9 @@
-print("YES") if 5>2 else print("NO") # знач_если_истина if условие else: знач_если_ложь
+slovo = input("Enter the word: ")
+cnt = 0
+for c in slovo:
+    if c.isalpha():
+        cnt += 1
+    else:
+        break
+else:
+    print(cnt,"letter in word")
