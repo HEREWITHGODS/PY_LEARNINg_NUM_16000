@@ -1,24 +1,18 @@
-# with open("numbers.txt", "w") as f:
-#     for i in range(1, 6):
-#         f.write(f"{i}\n")
-#
-# with open("numbers.txt", "r") as f:
-#     nums = [int(a) for a in f.readlines()]
-#     print(sum(nums))
-#     f.seek(0)
-#     for line in f:
-#         if int(line)%2 == 0:
-#             print(line.rstrip())
+from datetime import datetime
 
-with open("numbers.txt", "r") as f:
-    for line in f:
-        a = f.readline().strip()
+with open("poem.txt", "w", encoding="utf-8") as f:
+    f.write("Я  ПОМНЮ ЧУДНОЕ МГНОВЕНЬЕ\n")
+    f.write("ПЕРЕДО МНОЙ ЯВИЛОСЬ ТЫ\n")
+    f.write("КАК МИМОЛЁТНОЕ ВИДЕНИЕ\n")
+    f.write("КАК ГЕНИЙ ЧИСТОЙ КРАСОТЫ\n")
 
-        if a == "" or a == "STOP":
-            print("STOP READING")
-            break
-        else:
-            print(a)
+weekday = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"]
+for i in range(len(weekday)):
+    weekday[i] = weekday[i]+"\n"
 
-# f.seek(0)
-#     print(f.read())
+with open("weekday.txt", "w", encoding="utf-8") as f:
+    f.writelines(weekday)
+
+now = datetime.now()
+with open("log.txt", "a", encoding="utf-8") as f:
+    f.write(str(now)+"\n")
